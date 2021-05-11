@@ -1,14 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles.css" />
     <title>Document</title>
-      <script defer src="src/script.js"></script>
-  </head>
-  <body>
+
    
-  </body>
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="src/script.js" defer></script>
+
+   
+
+
+
+</head>
+<div class="container">
+    <body id ="body">
+        <header class="row">
+            <h1 class="col ">Take note</h1>
+        </header>
+        
+        <div class="row inputContainer  rounded">
+            <input class="col-auto" type="newTask" placeholder="Enter new Task" id="addTask">
+            <button class="col-auto" id="btnAdd">Add</button>
+            
+        </div>
+        <div class="listContainer">
+            <ul class="taskList rounded">
+                <li class="listItem " id="1">
+                    <div class="row align-items-center">
+                        <div class="col-auto m-3"><input type="checkbox"></div>
+                        <div class="col taskName">Task name</div>
+                        <div class="col-auto"><input type="button" value="" class="btn deleteButton"></div>
+                    </div>
+                </li>
+                <li class="listItem" id="2">
+                    <div class="row align-items-center">
+                        <div class="col-auto m-3"><input type="checkbox"></div>
+                        <div class="col taskName">Task name</div>
+                        <div class="col-auto"><input type="button" value="" class="btn deleteButton"></div>
+                    </div>
+                </li>
+                <li class="listItem" id="3">
+                    <div class="row align-items-center">
+                        <div class="col-auto m-3"><input type="checkbox"></div>
+                        <div class="col taskName">Task name</div>
+                        <div class="col-auto"><input type="button" value="" class="btn deleteButton"></div>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    <footer class="row" id="footer"><h6 class="col w-100">©Copyright 2021 
+        group 1 </h6></footer>
+        <!-- BOOTSTRAP -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ"
+            crossorigin="anonymous"></script>
+        
+
+    </body>
+</div>
+
 </html>
+
