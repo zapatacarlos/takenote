@@ -1,3 +1,71 @@
-body {
+#body {
   background-color: #046582;
+}
+header{
+  background-color: #F39189;
+  padding: 50px;
+  margin: 50px;
+  position: sticky;
+  top:0px;
+  
+}
+h1{
+  text-align: center;
+}
+.listItem {
+  visibility: ;
+  margin: 20px 0px;
+  background-color:white;
+
+}
+.container{
+  background-color: #C4C4C4;
+  
+}
+.taskList {
+  list-style-type: none;
+  background-color: transparent;
+  overflow: hidden;
+   margin-top: 150px;
+}
+
+.inputContainer {
+  margin: 50px;
+  padding:20px;
+  max-width: 50%;
+  width: 100%;
+  background-color: #F39189;
+}
+#footer{
+  text-align: center;
+  position:sticky;
+  bottom: 0px;
+  background-color: #F39189;
+  padding:50px;
+}
+
+.deleteButton {
+  background-image: url('/content/delete.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin: 15px;
+  
+}
+#addTask {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.3rem;
+}
+.taskName {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem
+}
+
+.listContainer {
+  height: 1080px;
+}
+.inputContainer {
+  position: fixed;
 }
