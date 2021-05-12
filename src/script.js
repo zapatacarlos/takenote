@@ -1,22 +1,26 @@
 let idCounter = 0
+const inputFocus = () => {
+    const input = document.getElementById('addTask');
+    input.focus()
+}
+inputFocus();
+
+const inputField = document.getElementById('addTask')
+console.log(inputField)
+inputField.addEventListener('keyup', (event) => {
+
+    if (event.key === 'Enter') {
+        btnAdd.click();
+        console.log(event.key)
+    }
+})
 function addTask() {
     
     const str = document.getElementById("addTask").value
-    console.log(str)
+    //console.log(str)
     const taskList = document.getElementById('taskList')
     const newLi = document.createElement('li')
-    taskList.lastChild.id = idCounter
     idCounter++
-    // if(Number.isInteger(taskList.lastChild.id) === true)
-    // {
-    //     newId = taskList.lastChild.id + 1
-    // }else{
-    //     newId = 1
-    //     console.log(newId)
-    // }
-    //newLi.addEventListener('click',editItem(idCounter))
-   
- 
     newLi.className='listItem'
     newLi.textContent = `${str}`;
     taskList.innerHTML += `<li class="listItem" id="${idCounter}">
@@ -26,20 +30,36 @@ function addTask() {
                                 <div class="col-auto"><input type="button" value="" class="btn deleteButton" id="btn${idCounter}"></div>
                                 </div>
                             </li>`
-
-const btnDelete = document.getElementById(`btn${idCounter}`)
-btnDelete.addEventListener('click', deleteTask)
+    btnDelete();
+    const inputField = document.getElementById('addTask')
+    inputField.value = ""
 };
-
 const btnAdd = document.getElementById('btnAdd') 
 btnAdd.addEventListener("click", addTask)
 
-function deleteTask() {
- 
+function deleteTask(id) {
+ console.log(id)
 const taskList = document.getElementById('taskList')
-taskList.removeChild(taskList.childNodes[idCounter])
+console.log(taskList.childNodes[id])
+taskList.removeChild(taskList.childNodes[id])
+if(idCounter>=1){
+    idCounter--
+}
 }
 
-// // create task, display list, edit task, saveUpdate task, delete task, mark as complete
+const btnDelete = function () {
+    
+        const lastChildNode = document.getElementById('taskList').lastChild.id
+        console.log(lastChildNode)
+        for(let i=1;i<=lastChildNode;i++){
+        document.getElementById(`btn${i}`).addEventListener('click', function () {
+        deleteTask(i)
+        })
+    }
+}
+
+
+
+
 
 
