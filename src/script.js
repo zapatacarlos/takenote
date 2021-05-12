@@ -23,33 +23,22 @@ function addTask() {
                                 <div class="row align-items-center">
                                 <div class="col-auto m-3"><input type="checkbox"></div>
                                 <div class="col taskName">${str}</div>
-                                <div class="col-auto"><input type="button" value="" class="btn deleteButton"></div>
+                                <div class="col-auto"><input type="button" value="" class="btn deleteButton" id="btn${idCounter}"></div>
                                 </div>
                             </li>`
 
-
+const btnDelete = document.getElementById(`btn${idCounter}`)
+btnDelete.addEventListener('click', deleteTask)
 };
 
 const btnAdd = document.getElementById('btnAdd') 
 btnAdd.addEventListener("click", addTask)
 
-// const editItem = (id) => {
-//     const taskList = document.getElementById('taskList')
-//      taskList.removeChild(taskList.childNodes[id])
-// }
-
-// function addTask() {
-//     const str = document.getElementById("newTask").value
-//     const div = document.createElement("div") // createElement("li")
-//     div.textContent = `${str}`;
-//     body.append(div) // append li to the ul
-
-// };
-
-// // select the button --> const
-// // onclick to invoke addtask
-
-
+function deleteTask() {
+ 
+const taskList = document.getElementById('taskList')
+taskList.removeChild(taskList.childNodes[idCounter])
+}
 
 // // create task, display list, edit task, saveUpdate task, delete task, mark as complete
 
