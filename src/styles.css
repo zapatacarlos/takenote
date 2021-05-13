@@ -1,58 +1,53 @@
 #body {
   background-color: #046582;
 }
-header{
-  background-color: #F39189;
+header {
+  background-color: #f39189;
   padding: 50px;
   margin: 50px;
   position: sticky;
-  top:0px;
-  
+  top: 0px;
 }
-h1{
+h1 {
   text-align: center;
 }
 .listItem {
-  
   margin: 20px 0px;
-  background-color:white;
-
+  background-color: white;
 }
-.container{
-  background-color: #C4C4C4;
-  
+.container {
+  background-color: #c4c4c4;
 }
 .taskList {
   list-style-type: none;
   background-color: transparent;
   overflow: hidden;
-   margin-top: 150px;
+  margin-top: 150px;
 }
 
 .inputContainer {
   margin: 50px;
-  padding:20px;
+  padding: 20px;
   max-width: 50%;
   width: 100%;
-  background-color: #F39189;
+  background-color: #f39189;
 }
-#footer{
+#footer {
   text-align: center;
-  position:sticky;
+  position: sticky;
   bottom: 0px;
-  background-color: #F39189;
-  padding:50px;
+  background-color: #f39189;
+  padding: 50px;
 }
 
 .deleteButton {
-  background-image: url('/content/delete.png');
+  background-image: url("/content/delete.png");
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
   width: 30px;
   height: 30px;
   margin: 15px;
-  
 }
 #addTask {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -60,7 +55,7 @@ h1{
 }
 .taskName {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.2rem
+  font-size: 1.2rem;
 }
 
 .listContainer {
@@ -68,4 +63,8 @@ h1{
 }
 .inputContainer {
   position: fixed;
+}
+.checkedbox {
+  text-decoration: line-through;
+  color: #f39189;
 }
