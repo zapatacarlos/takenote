@@ -5,7 +5,6 @@ const inputFocus = () => {
   const input = document.getElementById("addTask");
   input.focus();
 };
-
 inputFocus();
 
 inputField.addEventListener("keyup", (event) => {
@@ -26,6 +25,7 @@ function addTask() {
     alert("Please enter a valid task.");
     return false;
   }
+  checkedItemFn();
 
   // Create the id for the new task
   newDate = new Date();
