@@ -18,7 +18,15 @@ inputField.addEventListener('keyup', (event) => {
 
 function addTask() {
     const userInputTask = inputField.value
-
+    
+    // Validate for empty input
+    if (userInputTask === "" ||
+        userInputTask === null ||
+        userInputTask.split(' ').join('') === "") {
+        alert("Please enter a valid task.");
+        return false;
+    }
+    
     // Create the id for the new task
     newDate = new Date();
     newTime = newDate.getTime();
