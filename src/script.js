@@ -19,7 +19,6 @@ function addTask() {
   // Validate for empty input
   if (
     userInputTask === "" ||
-    userInputTask === null ||
     userInputTask.split(" ").join("") === ""
   ) {
     alert("Please enter a valid task.");
