@@ -40,7 +40,7 @@ function addTask() {
                            </div>
                         </li>`;
 
-  taskList.insertAdjacentHTML("beforeend", newListTemplate);
+  taskList.insertAdjacentHTML("afterbegin", newListTemplate);
 
   const deleteButtons = document.querySelectorAll("[data-delete]");
 
@@ -58,6 +58,8 @@ function checkedItemFn() {
       event.target.parentElement
         .closest("li")
         .children[0].children[1].classList.toggle("checkedbox");
+      const moveItem = event.target.parentElement.closest("li");
+      document.querySelector("ul").append(moveItem);
     });
   });
 }
