@@ -1,17 +1,17 @@
 const inputField = document.getElementById("addTask");
 const taskList = document.getElementById("taskList");
-
+const taskArray = [];
 const inputFocus = () => {
   const input = document.getElementById("addTask");
   input.focus();
 };
 inputFocus();
 
-inputField.addEventListener("keyup", (event) => {
+inputField.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     addTask();
   }
-});
+}); 
 
 function addTask() {
     const userInputTask = inputField.value;
@@ -31,15 +31,23 @@ function addTask() {
     newTime = newDate.getTime();
     newTaskId = newTime;
 
-    newListTemplate = `<li class="listItem rounded" id="${newTaskId}" data-task-id=${newTaskId}>
+    newListTemplate = `<li class="listItem rounded" id="${newTaskId}" data-unChecked name="${userInputTask}">
                             <div class="row align-items-center">
                                   <div class="col-auto" ><input type="checkbox" class="form-check-input box"></div>
-                                  <div class="col taskName">${userInputTask}</div>
+                                  <div class="col taskName" data-edit><p data-edit contentEditable = true >${userInputTask}</p></div>
                                   <div class="col-auto"><input type="button" value="" class="btn deleteButton" data-delete></div>
                             </div>
                         </li>`;
 
     taskList.insertAdjacentHTML("afterbegin", newListTemplate);
+
+    // taskObject = {taskId: newTaskId,
+    //               taskText: userInputTask,
+    //               taskStatus: "pending"}
+    
+    // taskArray.push(taskObject);
+
+    //console.log(taskArray)
 
     pendingTasks++;
 
@@ -48,8 +56,23 @@ function addTask() {
     for (let button of deleteButtons) {
       button.addEventListener("click", deleteTask);
     }
+    
+    
+    const pTags = document.querySelectorAll("p");
+
+    for (let tag of pTags) {
+      tag.addEventListener("keydown", (event) => {
+      if (event.key === "Enter"){
+        inputFocus();
+      }
+
+     })
+    }
+    
     checkedItemFn();
     inputField.value = "";
+
+    updateTaskArray();
 }
 
 function checkedItemFn() {
@@ -61,7 +84,15 @@ function checkedItemFn() {
           .closest("li")
           .children[0].children[1].classList.toggle("checkedbox");
         const moveItem = event.target.parentElement.closest("li");
-        document.querySelector("ul").append(moveItem);
+        if(event.target.parentElement
+          .closest("li")
+          .children[0].children[1].classList.contains("checkedbox")) {
+          document.querySelector("ul").append(moveItem);
+        }else {
+          document.querySelector("ul").prepend(moveItem);
+        }
+        
+        
       });
     });
 }
@@ -70,17 +101,49 @@ const btnAdd = document.getElementById("btnAdd");
 
 btnAdd.addEventListener("click", addTask);
 
-function deleteTask() {
+function deleteTask(event) {
     const taskContainer = event.currentTarget.closest(".listItem");
     // console.log(taskContainer.dataset);
     // console.log(taskContainer.dataset.taskId);
     taskContainer.remove();
 }
 
+// function updateTaskArray () {
+//   const arrayOfAllTasks = document.querySelectorAll('li');
+//   let newTaskArray = [];
+//   newTaskArray = []
+//   for (task in arrayOfAllTasks){
+//     const object = {taskId: task.id,
+//                   taskText: task.name,
+//                   taskStatus: task.data};
+//     taskArray.push(object);
+//     console.log(newTaskArray);
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Progress ring
 
 let pendingTasks = 100;
-let completedTasks = 18;
+let completedTasks = 10;
 
 function drawRingProgress(pendingTasks, completedTasks) {
 
