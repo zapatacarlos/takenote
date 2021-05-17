@@ -1,44 +1,117 @@
-#body {
-  background-color: #046582;
+.body-class {
+  background-color: lightgray;
+  /* background-color:#e8b80d; */
 }
-header {
+
+/* 3rd color alternative: #e80d68 */
+
+/* header {
   background-color: #f39189;
   padding: 50px;
   margin: 50px;
   position: sticky;
   top: 0px;
-}
-h1 {
+} */
+
+.title-class {
   text-align: center;
-}
-.listItem {
-  margin: 20px 0px;
-  background-color: white;
-}
-.container {
-  background-color: #c4c4c4;
-}
-.taskList {
-  list-style-type: none;
-  background-color: transparent;
-  overflow: hidden;
-  margin-top: 150px;
+  font-family: Pacifico;
+  /* text-shadow: whitesmoke;
+  text-shadow: 100mm; */
+  font-size: 80px;
+  color: #046582;
+  margin-top: 0px;
 }
 
-.inputContainer {
+.title-author{
+  /* text-align: right; */
+  font-family: Pacifico;
+  /* text-shadow: whitesmoke;
+  text-shadow: 100mm; */
+  font-size:16px;
+  color: #046582;
+  margin-left: 600px;
+}
+
+.p-title{
+  padding: 0;
+  border: 0;
+  margin-bottom: -20px;
+}
+
+/* .second-row{
+  /* display: flex;
+  justify-content: space-between;
+} */
+
+/* .card-body{
+  overflow-y: scroll;
+} */
+
+.card {
+  max-height: fit-content;
+  /* margin: 0 auto; Added */
+  /* float: none; Added */
+  margin-bottom: 40px; /* Added */
+  margin-top: 20px;
+}
+
+.completion-label{
+  color: darkslategray;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  text-align: right;
+  margin-right: 40px;
+}
+
+.box{
+  margin-left: 15px;
+}
+
+#addTask{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3px;
+}
+
+.listItem {
+  margin: 20px;
+  background-color: lightgoldenrodyellow;
+  width: inherit;
+  margin-left: inherit;
+}
+/* .container {
+  background-color: #c4c4c4;
+} */
+.taskList {
+  list-style-type: none;
+  /* background-color:#35b5cf; */
+  background-color: transparent;
+  overflow: hidden;
+  /* margin-top: 150px; */
+  color: darkslategray;
+  /* overflow-x: scroll; */
+  text-align: left;
+  /* padding: 20px; */
+  /* border: 10px; */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+}
+
+/* .inputContainer {
   margin: 50px;
   padding: 20px;
   max-width: 50%;
   width: 100%;
   background-color: #f39189;
-}
-#footer {
+} */
+/* #footer {
   text-align: center;
   position: sticky;
   bottom: 0px;
   background-color: #f39189;
   padding: 20px;
-}
+} */
 
 .deleteButton {
   background-image: url("../content/delete.png");
@@ -49,24 +122,32 @@ h1 {
   height: 30px;
   margin: 15px;
 }
+
 #addTask {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.3rem;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  /* font-size: 1.3rem; */
 }
 .taskName {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.2rem;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  /* font-size: 1.2rem; */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
 }
 
-.listContainer {
+/* .listContainer {
   height: 1080px;
-}
+} */
 .inputContainer {
   position: fixed;
 }
 .checkedbox {
   text-decoration: line-through;
   color: #f39189;
+  background-color: #fad2d2;
+  border-radius: 25px;
 }
 
 /* START Styling Progress ring */
@@ -74,8 +155,10 @@ h1 {
 .chart {
   position:relative;
   /* margin:0px; */
-  width:220px; height:220px;
+  width:180px; height:180px;
+  margin-bottom: 20px;
 }
+
 canvas {
   display: block;
   position:absolute;
@@ -88,8 +171,8 @@ span {
   line-height:220px;
   text-align:center;
   width:220px;
-  font-family:sans-serif;
-  font-size:30px;
+  font-family: Tahoma;
+  font-size:35px;
   font-weight:100;
   margin-left:5px;
 }
