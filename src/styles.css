@@ -37,7 +37,7 @@ h1 {
   position: sticky;
   bottom: 0px;
   background-color: #f39189;
-  padding: 50px;
+  padding: 20px;
 }
 
 .deleteButton {
@@ -68,3 +68,36 @@ h1 {
   text-decoration: line-through;
   color: #f39189;
 }
+
+/* START Styling Progress ring */
+
+.chart {
+  position:relative;
+  /* margin:0px; */
+  width:220px; height:220px;
+}
+canvas {
+  display: block;
+  position:absolute;
+  top:0;
+  left:0;
+}
+span {
+  color:#046582;
+  display:block;
+  line-height:220px;
+  text-align:center;
+  width:220px;
+  font-family:sans-serif;
+  font-size:30px;
+  font-weight:100;
+  margin-left:5px;
+}
+
+/* Links progress ring */
+/* https://stackoverflow.com/questions/14222138/css-progress-circle
+http://jsfiddle.net/Aapn8/3410/ */
+
+/* END Styling Progress ring */
+
+
