@@ -41,7 +41,7 @@ h1 {
 }
 
 .deleteButton {
-  background-image: url("/content/delete.png");
+  background-image: url("content/delete.png");
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
