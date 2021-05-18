@@ -196,6 +196,7 @@ function updateTaskArray () {
   allTheTasks = taskArray.length
 
   drawRingProgress(completedTasks, allTheTasks)
+  inputFocus();
 }
 
 function drawRingProgress(completedTasks, allTheTasks) {
