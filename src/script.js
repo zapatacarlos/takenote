@@ -20,6 +20,7 @@ function retrieveTasks() {
     for(let retrievedTask of retrievedTasks) {
 
       addTask(retrievedTask.taskId,retrievedTask.taskText,retrievedTask.taskStatus);
+      
     }
   }
 }
@@ -196,7 +197,7 @@ function updateTaskArray () {
   allTheTasks = taskArray.length
 
   drawRingProgress(completedTasks, allTheTasks)
-  inputFocus();
+  //inputFocus();
 }
 
 function drawRingProgress(completedTasks, allTheTasks) {
