@@ -90,7 +90,7 @@ function addTask(id,text,status) {
       userInputTask === "" ||
       userInputTask.split(" ").join("") === ""
     ) {
-      alert("Please enter a valid task.");
+      alert("Please enter a non-empty task.");
       return false;
     }
     checkedItemFn();
@@ -167,7 +167,7 @@ btnAdd.addEventListener("click", addTask);
 
 function deleteTask(event) {
   const taskContainer = event.currentTarget.closest(".listItem");
-  if(confirm("Are you sure?")){
+  if(confirm("Are you sure you want to Delete this task?")){
       taskContainer.remove();
   }
   updateTaskArray ()  
